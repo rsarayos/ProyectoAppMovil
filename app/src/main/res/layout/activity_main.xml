@@ -1,20 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/background">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:fontFamily="@font/lexend"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="51dp"
+        android:gravity="center_vertical">
+
+        <!-- TextView -->
+
+        <!-- ImageButton -->
+
+        <TextView
+            android:id="@+id/tv_productoSelecionado"
+            android:layout_width="207dp"
+            android:layout_height="87dp"
+            android:gravity="center_vertical"
+            android:text="Todos los eventos"
+            android:textColor="@color/font"
+            android:textSize="36sp" />
+
+        <ImageButton
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="80dp"
+            android:background="@drawable/menu"
+            android:contentDescription="menu" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="15dp"
+        android:contentDescription="Lista de productos disponibles">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        app:backgroundTint="@color/font"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:tint="@color/black"
+        android:src="@drawable/plus" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
