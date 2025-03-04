@@ -9,6 +9,7 @@
     tools:context=".NewEventActivity">
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="248dp"
         android:layout_height="123dp"
         android:fontFamily="@font/lexend"
@@ -21,6 +22,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.074" />
+
+    <ImageButton
+        android:id="@+id/bt_regresar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="null"
+        android:contentDescription="Boton para regresar"
+        android:src=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/tv_event_name"
