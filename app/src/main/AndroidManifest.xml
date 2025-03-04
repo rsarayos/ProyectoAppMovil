@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PlaneacionDeEventos"
         tools:targetApi="31">
         <activity
+            android:name=".createTask"
+            android:exported="false" />
+        <activity
             android:name=".Configuration"
             android:exported="false" />
         <activity
