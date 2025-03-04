@@ -13,3 +13,39 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de dependencias
+node_modules/
+vendor/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de compilación
+dist/
+build/
+*.o
+*.so
+*.dll
+*.exe
+*.class
+
+# Configuración del entorno
+.env
+*.log
+*.sqlite3
+
+# Archivos de IDEs y editores
+.vscode/
+.idea/
+*.iml
+
+# Archivos de Git
+.gitignore
+.git/
