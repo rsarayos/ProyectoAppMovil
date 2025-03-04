@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="248dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="51dp"
+        android:fontFamily="@font/lexend"
+        android:text="Hola, Bienvenido a Nuestra App"
+        android:textColor="@color/font"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_register_form_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:text="Registrarse"
+        android:fontFamily="@font/lexend"
+        android:textColor="@color/font"
+        android:textFontWeight="100"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:textSize="13sp"
+        android:textColor="@color/font"
+        android:fontFamily="@font/lexend"
+        android:text="Nombre"
+        android:textFontWeight="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_name_form"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="358dp"
+        android:backgroundTint="@color/font"
+        android:ems="10"
+        android:fontFamily="@font/lexend"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textColor="@color/font"
+        android:textColorHint="@color/backgroundButton"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_email_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="440dp"
+        android:fontFamily="@font/lexend"
+        android:text="Email"
+        android:textColor="@color/font"
+        android:textFontWeight="100"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_email_form"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="460dp"
+        android:backgroundTint="@color/font"
+        android:ems="10"
+        android:fontFamily="@font/lexend"
+        android:hint="email@example.com"
+        android:inputType="text"
+        android:textColor="@color/font"
+        android:textColorHint="@color/backgroundButton"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_create_password_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="536dp"
+        android:fontFamily="@font/lexend"
+        android:text="Crear Contraseña"
+        android:textColor="@color/font"
+        android:textFontWeight="100"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_create_password_form"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="555dp"
+        android:backgroundTint="@color/font"
+        android:ems="10"
+        android:fontFamily="@font/lexend"
+        android:hint="○○○○○○○○○○○○"
+        android:inputType="textPassword"
+        android:textColor="@color/font"
+        android:textColorHint="@color/backgroundButton"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_confirm_password_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="636dp"
+        android:fontFamily="@font/lexend"
+        android:text="Confirmar Contraseña"
+        android:textColor="@color/font"
+        android:textFontWeight="100"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.211"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_confirm_password_form"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="655dp"
+        android:backgroundTint="@color/font"
+        android:ems="10"
+        android:fontFamily="@font/lexend"
+        android:hint="○○○○○○○○○○○○"
+        android:inputType="textPassword"
+        android:textColor="@color/font"
+        android:textColorHint="@color/backgroundButton"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_register"
+        android:layout_width="230dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="750dp"
+        android:backgroundTint="@color/font"
+        android:fontFamily="@font/lexend"
+        android:text="Registrarse"
+        app:cornerRadius="15dp"
+        android:textFontWeight="100"
+        android:textColor="@color/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="819dp"
+        android:backgroundTint="@color/background"
+        android:text="Iniciar Sesión"
+        android:fontFamily="@font/lexend"
+        android:textSize="12sp"
+        android:textColor="@color/backgroundButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
