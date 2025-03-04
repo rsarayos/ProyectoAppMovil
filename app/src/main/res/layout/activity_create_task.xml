@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".createTask"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="248dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/lexend"
+        android:text="Crear\nNueva Tarea"
+        android:textColor="@color/font"
+        android:textSize="36sp"
+        />
+
+    <ImageButton
+        android:id="@+id/bt_regresar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/background"
+        android:src="@drawable/returnarrow"
+        android:contentDescription="Boton para regresar"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="51dp">
+
+        <TextView
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:text="Nombre de la Tarea"
+            android:textColor="@color/font"
+            android:fontFamily="@font/lexend"
+            android:textSize="13sp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/et_nombreTarea"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:hint="Accesorios para fiesta"
+            android:textColorHint="@color/backgroundButton"
+            android:inputType="text"
+            android:backgroundTint="@color/font"
+            android:fontFamily="@font/lexend"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:text="Descripción"
+            android:textColor="@color/font"
+            android:fontFamily="@font/lexend"
+            android:textSize="13sp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/et_descripcion"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:hint="Descripción de la tarea"
+            android:textColorHint="@color/backgroundButton"
+            android:inputType="text"
+            android:backgroundTint="@color/font"
+            android:fontFamily="@font/lexend"
+            android:textSize="12sp"
+
+            />
+        
+        <TextView
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:text="Precio estimado"
+            android:textColor="@color/font"
+            android:fontFamily="@font/lexend"
+            android:textSize="13sp"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/et_precio"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:hint="$50.00"
+            android:textColorHint="@color/backgroundButton"
+            android:inputType="numberDecimal"
+            android:backgroundTint="@color/font"
+            android:fontFamily="@font/lexend"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/bt_siguiente"
+        android:layout_width="230dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="91dp"
+        app:cornerRadius="15dp"
+        android:fontFamily="@font/lexend"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="15dp"
+        android:text="Siguiente"
+        android:backgroundTint="@color/font"
+        android:textAlignment="center"
+        android:textColor="@color/backgroundButton"
+        android:textSize="13sp"/>
+
+</LinearLayout>

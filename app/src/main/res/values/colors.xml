@@ -4,4 +4,5 @@
     <color name="font">#FFFFFFFF</color>
     <color name="background">#212121</color>
     <color name="backgroundButton">#4E4C4C</color>
+    <color name="colorButton">#FF6969</color>
 </resources>

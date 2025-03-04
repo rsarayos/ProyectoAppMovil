@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Configuration"
+    android:orientation="vertical"
+    android:background="@color/background"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configuración"
+        android:fontFamily="@font/lexend"
+        android:textColor="@color/font"
+        android:textSize="36sp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="43dp"
+        />
+
+    <Button
+        android:id="@+id/bt_editarPerfil"
+        android:layout_width="365dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="148dp"
+        android:backgroundTint="@color/backgroundButton"
+        app:cornerRadius="15dp"
+        android:fontFamily="@font/lexend"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="15dp"
+        android:text="Editar Perfil"
+        android:textAlignment="textStart"
+        android:textColor="@color/font"
+        android:textSize="27sp" />
+    
+    <Button
+        android:id="@+id/bt_cambiarContraseña"
+        android:layout_width="365dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/backgroundButton"
+        app:cornerRadius="15dp"
+        android:fontFamily="@font/lexend"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="15dp"
+        android:text="Cambiar Contraseña"
+        android:textSize="27sp"
+        android:textColor="@color/font"
+        android:textAlignment="textStart"
+        />
+    
+    <Button
+        android:id="@+id/bt_cerrarSesion"
+        android:layout_width="301dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginStart="52dp"
+        android:backgroundTint="@color/background"
+        app:cornerRadius="6dp"
+        android:fontFamily="@font/lexend"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="15dp"
+        android:text="Cerrar Sesión"
+        android:textSize="20sp"
+        android:textColor="@color/colorButton"
+        android:textAlignment="center"
+        />
+
+</LinearLayout>

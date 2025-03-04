@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectedProducts"
+    android:background="@color/background">
+    
+    <TextView
+        android:id="@+id/tv_productoSelecionado"
+        android:layout_width="236dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="51dp"
+        android:text="Producto selecionado"
+        android:textColor="@color/font"
+        android:textSize="36sp"
+        android:gravity="center_vertical"
+        />
+
+    <ImageButton
+        android:id="@+id/bt_regresar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="18dp"
+        android:background="null"
+        android:src="@drawable/returnarrow"
+        android:contentDescription="Boton para regresar"
+        />
+
+    <ScrollView
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="15dp"
+        android:contentDescription="Lista de productos disponibles">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+    
+
+</LinearLayout>
