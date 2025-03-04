@@ -29,6 +29,7 @@
             android:textSize="36sp"/>
 
         <ImageButton
+            android:id="@+id/bt_regresar"
             android:layout_width="53dp"
             android:layout_height="53dp"
             android:contentDescription="Botón para acceder al menú de opciones"/>
@@ -39,7 +40,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="2"
-        android:rowCount="3"
         android:padding="16dp"/>
 
 </LinearLayout>
