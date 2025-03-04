@@ -26,6 +26,19 @@
             android:exported="false" />
         <activity
             android:name=".Register"
+            android:name=".SelectedProducts"
+            android:exported="false" />
+        <activity
+            android:name=".Products"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
+            android:name=".createTask"
+            android:exported="false" />
+        <activity
+            android:name=".Configuration"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
