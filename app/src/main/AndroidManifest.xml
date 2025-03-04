@@ -13,13 +13,32 @@
         android:theme="@style/Theme.PlaneacionDeEventos"
         tools:targetApi="31">
         <activity
-            android:name=".EditSubtaskActivity"
+            android:name=".CreateSubtask"
             android:exported="false" />
         <activity
-            android:name=".NewEventActivity"
+            android:name=".EditProfile"
             android:exported="false" />
         <activity
-            android:name=".ActivityEditEvent"
+            android:name=".ChangePassword"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:name=".SelectedProducts"
+            android:exported="false" />
+        <activity
+            android:name=".Products"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false" />
+        <activity
+            android:name=".createTask"
+            android:exported="false" />
+        <activity
+            android:name=".Configuration"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
