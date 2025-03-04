@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PlaneacionDeEventos"
         tools:targetApi="31">
         <activity
+            android:name=".EditSubtaskActivity"
+            android:exported="false" />
+        <activity
             android:name=".NewEventActivity"
             android:exported="false" />
         <activity

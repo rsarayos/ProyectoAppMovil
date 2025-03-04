@@ -98,7 +98,7 @@
         android:textColor="@color/font"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_description" />
 
@@ -108,7 +108,7 @@
         android:layout_height="50dp"
         android:ems="10"
         android:hint="Precio estimado"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textSize="13sp"
         android:textColorHint="@color/backgroundButton"
         android:fontFamily="@font/lexend"
@@ -121,12 +121,12 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btn_save"
+        android:id="@+id/btn_edit"
         android:layout_width="230dp"
         android:layout_height="64dp"
         android:backgroundTint="@color/font"
         android:fontFamily="@font/lexend"
-        android:text="Guardar"
+        android:text="Actualizar"
         android:textColor="@color/background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
