@@ -39,6 +39,13 @@
             android:exported="false" />
         <activity
             android:name=".Configuration"
+            android:name=".SubTasks"
+            android:exported="false" />
+        <activity
+            android:name=".SummaryScreen"
+            android:exported="false" />
+        <activity
+            android:name=".eventScreen"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".eventScreen"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tv_event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexend"
+        android:text="Evento"
+        android:textColor="@color/font"
+        android:textSize="36sp"
+        android:layout_marginTop="100sp"
+        android:layout_marginLeft="51sp"/>
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textColor="@color/font"
+        android:textSize="36sp"
+        android:layout_marginLeft="51sp"
+        android:layout_marginBottom="-50sp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="600sp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:padding="10dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/font"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp">
+
+                <TextView
+                    android:id="@+id/tvEventoPrincipal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Evento principal en local 'Las Flores'"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/lexend"
+                    android:textSize="13sp"
+                    android:gravity="center"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <include
+                android:id="@+id/itemBebidas"
+                layout="@layout/item_task" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="add_task"
+        android:tint="@android:color/white"
+        app:backgroundTint="@color/font"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>

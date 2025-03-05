@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/backgroundButton">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <CheckBox
+            android:id="@+id/cbTarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@android:color/white"
+            android:text="Accesorios Para Fiesta"
+            android:fontFamily="@font/lexend"
+            android:textSize="13sp"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="15sp"/>
+
+        <ImageView
+            android:id="@+id/ivExpand"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="Comprar accesorios"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTareaHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:paddingStart="32dp"
+        android:paddingEnd="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comprar accesorios en zona centro"
+        android:textAlignment="center"
+        android:textColor="@color/font"
+        android:fontFamily="@font/lexend"
+        android:textSize="13sp"
+        android:background="@color/background"
+        android:padding="10sp"
+        android:layout_marginBottom="10sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutSubtareas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/itemBebidas"
+                layout="@layout/sub_task" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="10sp">
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total"
+                android:textColor="@color/font"
+                android:textSize="13sp"
+                android:fontFamily="@font/lexend"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tv_totalCantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$600.00"
+                android:textColor="@color/font"
+                android:textSize="13sp"
+                android:fontFamily="@font/lexend"
+                android:layout_marginBottom="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
