@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="@android:color/white"
-            android:text="Accesorios Para Fiesta"
+            android:text="Vasos"
             android:fontFamily="@font/lexend"
             android:textSize="13sp"
             android:textColor="@android:color/white"
@@ -36,64 +36,60 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="visible"
+        android:visibility="gone"
         android:paddingStart="32dp"
         android:paddingEnd="16dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Comprar accesorios en zona centro"
-        android:textAlignment="center"
-        android:textColor="@color/font"
-        android:fontFamily="@font/lexend"
-        android:textSize="13sp"
-        android:background="@color/background"
-        android:padding="10sp"
-        android:layout_marginBottom="10sp" />
-
-        <LinearLayout
-            android:id="@+id/layoutSubtareas"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <include
-                android:id="@+id/itemBebidas"
-                layout="@layout/sub_task" />
-
-        </LinearLayout>
+            android:text="Comprar accesorios en zona centro"
+            android:textAlignment="center"
+            android:textColor="@color/font"
+            android:fontFamily="@font/lexend"
+            android:textSize="13sp"
+            android:background="@color/background"
+            android:padding="20sp"
+            android:layout_marginBottom="10sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30sp"
+            android:layout_marginTop="10sp"
             android:layout_marginRight="20sp"
-            android:layout_marginTop="10sp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:layout_weight="1"
-                android:text="Total"
-                android:textColor="@color/font"
-                android:textSize="13sp"
                 android:fontFamily="@font/lexend"
-                android:layout_marginBottom="4dp" />
+                android:text="Precio"
+                android:textColor="@color/font"
+                android:textSize="13sp" />
 
             <TextView
                 android:id="@+id/tv_totalCantidad"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/lexend"
                 android:text="$600.00"
                 android:textColor="@color/font"
-                android:textSize="13sp"
-                android:fontFamily="@font/lexend"
-                android:layout_marginBottom="4dp" />
+                android:textSize="13sp" />
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borrar"
+            android:textColor="@color/font"
+            android:gravity="center"
+            android:layout_marginLeft="150sp"/>
 
     </LinearLayout>
 
