@@ -26,6 +26,8 @@
             android:exported="false" />
         <activity
             android:name=".Register"
+            android:exported="false" />
+        <activity
             android:name=".SelectedProducts"
             android:exported="false" />
         <activity
@@ -39,6 +41,8 @@
             android:exported="false" />
         <activity
             android:name=".Configuration"
+            android:exported="false" />
+        <activity
             android:name=".SubTasks"
             android:exported="false" />
         <activity
