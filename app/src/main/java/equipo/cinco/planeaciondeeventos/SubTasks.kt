@@ -1,6 +1,7 @@
 package equipo.cinco.planeaciondeeventos
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
@@ -23,6 +24,7 @@ class SubTasks : AppCompatActivity() {
         }
 
         var button_regresar : ImageButton = findViewById(R.id.bt_regresar) as ImageButton
+        var button_agregar : ImageButton = findViewById(R.id.fab_add) as ImageButton
 
         val itemTaskView = findViewById<View>(R.id.item)
 

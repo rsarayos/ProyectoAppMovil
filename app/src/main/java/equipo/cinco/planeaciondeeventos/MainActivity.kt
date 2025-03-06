@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        var button_addevent : Button = findViewById(R.id.fab_add) as Button
+        var button_addevent : ImageButton = findViewById(R.id.fab_add) as ImageButton
         var button_event : Button = findViewById(R.id.bt_agregarEv) as Button
         var button_profil : ImageButton = findViewById(R.id.summary_icon) as ImageButton
 

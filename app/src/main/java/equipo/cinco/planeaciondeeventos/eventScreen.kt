@@ -25,7 +25,7 @@ class eventScreen : AppCompatActivity() {
 
         var button_resumen : ImageButton = findViewById(R.id.summary_icon) as ImageButton
         var button_regresar : ImageButton = findViewById(R.id.bt_regresar) as ImageButton
-        var button_agregar : Button = findViewById(R.id.fabAdd) as Button
+        var button_agregar : ImageButton = findViewById(R.id.fabAdd) as ImageButton
 
 
         val itemTaskView = findViewById<View>(R.id.itemBebidas)

@@ -56,7 +56,7 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="600sp"
+        android:layout_height="550sp"
         android:layout_marginTop="?attr/actionBarSize"
         android:padding="10dp"
         android:clipToPadding="false">
@@ -99,13 +99,19 @@
 
     </ScrollView>
 
-    <Button
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:id="@+id/fabAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="add_task"
-        android:tint="@android:color/white"
-        app:backgroundTint="@color/font"
-        android:layout_margin="16dp"/>
+        android:src="@drawable/plus"
+        android:layout_marginStart="340dp"
+        android:scaleType="centerInside"
+        android:padding="20dp"
+        android:contentDescription="Boton para agregar mas eventos"
+        android:background="@drawable/circle_background"
+        android:clipToOutline="true"/>
+
+
 
 </LinearLayout>
