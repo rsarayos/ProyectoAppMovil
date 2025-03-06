@@ -22,7 +22,7 @@
             android:name=".ChangePassword"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Register"
@@ -43,7 +43,10 @@
             android:name=".eventScreen"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".NewEventActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

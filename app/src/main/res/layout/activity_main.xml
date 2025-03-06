@@ -36,10 +36,9 @@
             android:id="@+id/summary_icon"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@drawable/profile_picture"
-            android:contentDescription="profile"
             android:layout_marginLeft="50sp"
-            />
+            android:background="@drawable/profile_picture"
+            android:contentDescription="profile" />
     </LinearLayout>
 
 
@@ -69,16 +68,20 @@
                 android:textColor="@color/font"
                 android:fontFamily="@font/lexend"
                 android:textSize="20sp"
-                android:id="@+id/bt_agregar"
+                android:id="@+id/bt_agregarEv"
                 android:layout_gravity="center_horizontal"
                 />
 
+
+
         </LinearLayout>
     </ScrollView>
+
+
     <Button
         android:id="@+id/fab_add"
         android:layout_width="29dp"
-        android:layout_height="35dp"
+        android:layout_height="34dp"
         android:layout_margin="16dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="300dp"

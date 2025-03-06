@@ -20,12 +20,18 @@ class Register : AppCompatActivity() {
         }
         
 
-//        var button_register : Button = findViewById(R.id.b_register2) as Button
-//        var button_login : Button = findViewById(R.id.b_login2) as Button
-//
-//        button_register.setOnClickListener{
-//            val
-//        }
+        var button_register : Button = findViewById(R.id.b_register2) as Button
+        var button_login : Button = findViewById(R.id.b_login2) as Button
+
+        button_register.setOnClickListener{
+            val intent = Intent(this@Register,Login::class.java)
+            startActivity(intent)
+        }
+
+        button_login.setOnClickListener{
+            val intent = Intent(this@Register,Login::class.java)
+            startActivity(intent)
+        }
 
     }
 }

@@ -23,11 +23,13 @@
             android:textColor="@android:color/white"
             android:layout_marginLeft="15sp"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/ivExpand"
             android:layout_width="50sp"
+            android:src="@drawable/forwardarrow"
+            android:background="@color/background"
             android:layout_height="50sp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="120dp"
             android:contentDescription="Comprar accesorios"/>
     </LinearLayout>
 

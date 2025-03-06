@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Configuración"
+        android:text="Perfil"
         android:fontFamily="@font/lexend"
         android:textColor="@color/font"
         android:textSize="36sp"
@@ -21,12 +21,25 @@
         android:layout_marginStart="43dp"
         />
 
+    <ImageButton
+        android:id="@+id/bt_regresar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/returnarrow"
+        android:contentDescription="Boton para regresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <Button
         android:id="@+id/bt_editarPerfil"
         android:layout_width="365dp"
         android:layout_height="102dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="@color/backgroundButton"
         app:cornerRadius="15dp"
         android:fontFamily="@font/lexend"
