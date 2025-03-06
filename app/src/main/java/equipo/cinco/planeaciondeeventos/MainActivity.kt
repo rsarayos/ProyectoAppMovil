@@ -46,9 +46,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+
         button_more_option.setOnClickListener{view ->
             val popuMenu = PopupMenu(this, view)
             popuMenu.menuInflater.inflate(R.menu.event_menu_option, popuMenu.menu)
+
+            try {
+                val popupField = PopupMenu::class.java.getDeclaredField("mPopup")
+                popupField.isAccessible = true
+                val menuPopupHelper = popupField.get(popuMenu)
+                val setForceShowIconMethod = menuPopupHelper.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+                setForceShowIconMethod.isAccessible = true
+                setForceShowIconMethod.invoke(menuPopupHelper, true)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
 
             popuMenu.setOnMenuItemClickListener { item: MenuItem ->
                 when (item.itemId) {
