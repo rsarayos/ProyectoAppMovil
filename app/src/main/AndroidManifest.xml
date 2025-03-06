@@ -40,6 +40,9 @@
             android:name=".SummaryScreen"
             android:exported="false" />
         <activity
+            android:name=".ActivityEditEvent"
+            android:exported="false"/>
+        <activity
             android:name=".eventScreen"
             android:exported="false" />
         <activity
