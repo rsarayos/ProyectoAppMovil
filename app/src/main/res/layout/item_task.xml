@@ -24,12 +24,20 @@
             android:layout_marginLeft="15sp"/>
 
         <ImageButton
+            android:id="@+id/ivVisibilidad"
+            android:layout_width="110sp"
+            android:background="@color/backgroundButton"
+            android:layout_height="50sp"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Comprar accesorios"/>
+
+        <ImageButton
             android:id="@+id/ivExpand"
             android:layout_width="50sp"
             android:src="@drawable/forwardarrow"
             android:background="@color/background"
             android:layout_height="50sp"
-            android:layout_marginStart="120dp"
+            android:layout_marginStart="10dp"
             android:contentDescription="Comprar accesorios"/>
     </LinearLayout>
 

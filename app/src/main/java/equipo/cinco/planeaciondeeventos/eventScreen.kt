@@ -31,17 +31,21 @@ class eventScreen : AppCompatActivity() {
         val itemTaskView = findViewById<View>(R.id.itemBebidas)
 
         val ivExpand = itemTaskView.findViewById<ImageView>(R.id.ivExpand)
+        val ivVisibility = itemTaskView.findViewById<ImageView>(R.id.ivVisibilidad)
         val layoutTareaHeader = itemTaskView.findViewById<LinearLayout>(R.id.layoutTareaHeader)
 
         ivExpand.setOnClickListener {
-//            if (layoutTareaHeader.visibility == View.VISIBLE) {
-//                layoutTareaHeader.visibility = View.GONE
-//            } else {
-//                layoutTareaHeader.visibility = View.VISIBLE
-//            }
             val intent = Intent(this@eventScreen,SubTasks::class.java)
             startActivity(intent)
 
+        }
+
+        ivVisibility.setOnClickListener {
+            if (layoutTareaHeader.visibility == View.VISIBLE) {
+                layoutTareaHeader.visibility = View.GONE
+            } else {
+                layoutTareaHeader.visibility = View.VISIBLE
+            }
         }
 
         button_regresar.setOnClickListener{
