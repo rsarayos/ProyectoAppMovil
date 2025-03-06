@@ -170,7 +170,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/b_register"
+        android:id="@+id/b_register2"
         android:layout_width="230dp"
         android:layout_height="64dp"
         android:layout_marginTop="750dp"
@@ -186,7 +186,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/b_login"
+        android:id="@+id/b_login2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="819dp"

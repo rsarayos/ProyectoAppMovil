@@ -20,15 +20,17 @@
         android:layout_marginTop="100sp"
         android:layout_marginLeft="51sp"/>
 
-    <TextView
-        android:id="@+id/tv_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="a"
-        android:textColor="@color/font"
-        android:textSize="36sp"
-        android:layout_marginLeft="51sp"
-        android:layout_marginBottom="-50sp"/>
+    <ImageButton
+            android:id="@+id/bt_regresar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/returnarrow"
+            android:contentDescription="Boton para regresar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.107"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ScrollView
         android:id="@+id/scrollView"

@@ -1,6 +1,8 @@
 package equipo.cinco.planeaciondeeventos
 
 import android.os.Bundle
+import android.widget.Button
+import android.content.Intent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,14 @@ class Register : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        
+
+//        var button_register : Button = findViewById(R.id.b_register2) as Button
+//        var button_login : Button = findViewById(R.id.b_login2) as Button
+//
+//        button_register.setOnClickListener{
+//            val
+//        }
+
     }
 }
