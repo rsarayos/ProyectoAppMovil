@@ -198,4 +198,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Error en algun dato"
+        android:textColor="@color/font"
+        android:textSize="15dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/b_register2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_confirm_password_form" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
