@@ -17,16 +17,16 @@
         android:fontFamily="@font/lexend"
         android:textColor="@color/font"
         android:textSize="36sp"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="43dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginStart="51dp"
         />
 
     <ImageButton
         android:id="@+id/bt_regresar"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/returnarrow"
         android:contentDescription="Boton para regresar"
         app:layout_constraintEnd_toEndOf="parent"

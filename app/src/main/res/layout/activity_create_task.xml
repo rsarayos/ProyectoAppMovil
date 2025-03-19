@@ -52,13 +52,12 @@
             android:id="@+id/et_nombreTarea"
             android:layout_width="310dp"
             android:layout_height="50dp"
-            android:hint="Accesorios para fiesta"
-            android:textColorHint="@color/backgroundButton"
-            android:inputType="text"
             android:backgroundTint="@color/font"
             android:fontFamily="@font/lexend"
-            android:textSize="12sp"
-            />
+            android:hint="Accesorios para fiesta"
+            android:inputType="text"
+            android:textColorHint="@color/backgroundButton"
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="310dp"

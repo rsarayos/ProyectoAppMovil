@@ -12,41 +12,28 @@
         android:id="@+id/textView"
         android:layout_width="248dp"
         android:layout_height="123dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/lexend"
+        android:gravity="left|center"
         android:text="Editar un evento"
         android:textColor="@color/font"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.074" />
+        app:layout_constraintVertical_bias="0.113" />
 
     <ImageButton
         android:id="@+id/bt_regresar"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="228dp"
         android:background="@drawable/returnarrow"
         android:contentDescription="Boton para regresar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/tv_event_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="232dp"
-        android:fontFamily="@font/lexend"
-        android:text="Nombre del evento"
-        android:textColor="@color/font"
-
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,98 +41,119 @@
         android:id="@+id/et_name_event"
         android:layout_width="310dp"
         android:layout_height="50dp"
+        android:layout_marginTop="342dp"
+        android:backgroundTint="@color/font"
         android:ems="10"
         android:fontFamily="@font/lexend"
         android:hint="Evento"
-        android:textSize="13sp"
-        android:textColorHint="@color/backgroundButton"
-        android:backgroundTint="@color/font"
         android:inputType="textPersonName"
+        android:textColorHint="@color/backgroundButton"
+        android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_event_name"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037" />
 
     <TextView
-        android:id="@+id/tv_description"
+        android:id="@+id/tv_event_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="344dp"
         android:fontFamily="@font/lexend"
-
-        android:text="Descripción"
+        android:text="Nombre del evento"
         android:textColor="@color/font"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.112"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_name_event" />
 
-    <EditText
-        android:id="@+id/et_description"
-        android:layout_width="310dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="Descripción"
-        android:inputType="textPersonName"
-        android:textSize="13sp"
-        android:textColorHint="@color/backgroundButton"
-        android:fontFamily="@font/lexend"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="@color/font"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_description"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/tv_estimated_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/lexend"
-        android:text="Precio estimado"
-        android:textColor="@color/font"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_description" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/et_estimated_price"
         android:layout_width="310dp"
         android:layout_height="50dp"
+        android:layout_marginTop="524dp"
+        android:backgroundTint="@color/font"
         android:ems="10"
+        android:fontFamily="@font/lexend"
         android:hint="Precio estimado"
         android:inputType="numberDecimal"
-        android:textSize="13sp"
         android:textColorHint="@color/backgroundButton"
-        android:fontFamily="@font/lexend"
+        android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="@color/font"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_estimated_price"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="430dp"
+        android:backgroundTint="@color/font"
+        android:ems="10"
+        android:fontFamily="@font/lexend"
+        android:hint="Descripción"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/backgroundButton"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="432dp"
+        android:fontFamily="@font/lexend"
+        android:text="Descripción"
+        android:textColor="@color/font"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_estimated_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="524dp"
+        android:fontFamily="@font/lexend"
+        android:text="Precio estimado"
+        android:textColor="@color/font"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_edit"
         android:layout_width="230dp"
         android:layout_height="64dp"
+        android:layout_marginTop="694dp"
         android:backgroundTint="@color/font"
         android:fontFamily="@font/lexend"
         android:text="Actualizar"
         android:textColor="@color/background"
+        android:textFontWeight="100"
+        android:textSize="13sp"
+        app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_estimated_price"
-        app:layout_constraintVertical_bias="0.42" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
