@@ -52,14 +52,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="550sp"
         android:layout_marginTop="?attr/actionBarSize"
-        android:padding="10dp"
-        android:clipToPadding="false">
+        android:clipToPadding="false"
+        android:padding="10dp">
 
         <LinearLayout
             android:id="@+id/linearLayoutContent"
@@ -70,23 +69,24 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
                 android:layout_marginBottom="16dp"
                 app:cardBackgroundColor="@color/font"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                android:layout_marginLeft="5sp"
-                android:layout_marginRight="5sp">
+                app:cardElevation="4dp">
 
                 <TextView
                     android:id="@+id/tvEventoPrincipal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:layout_width="379dp"
+                    android:layout_height="71dp"
+                    android:fontFamily="@font/lexend"
+                    android:gravity="center"
+                    android:padding="20dp"
                     android:text="Evento principal en local 'Las Flores'"
                     android:textColor="@android:color/black"
-                    android:fontFamily="@font/lexend"
                     android:textSize="13sp"
-                    android:gravity="center"/>
+                    app:cornerRadius="15dp" />
             </com.google.android.material.card.MaterialCardView>
 
             <include
@@ -94,11 +94,9 @@
                 layout="@layout/item_task" />
 
 
-
         </LinearLayout>
 
     </ScrollView>
-
 
     <ImageButton
         android:layout_width="50dp"

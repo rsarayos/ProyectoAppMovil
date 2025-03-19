@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layoutItemSubtarea"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center_vertical"
-    android:paddingBottom="4dp"
-    android:background="@color/background">
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:paddingLeft="10dp"
+    app:cornerRadius="15dp"
+    android:background="@drawable/bg_rounded">
 
     <CheckBox
         android:id="@+id/cbSubtarea"
@@ -22,6 +26,7 @@
         android:id="@+id/tvCostoSubtarea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
         android:textColor="@android:color/white"
         android:text="$100.00"
         android:fontFamily="@font/lexend"

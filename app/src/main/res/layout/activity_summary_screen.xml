@@ -18,15 +18,15 @@
         android:text="Resumen"
         android:textColor="@color/font"
         android:textSize="36sp"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="51dp"/>
 
     <ImageButton
         android:id="@+id/bt_regresar"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="45dp"
         android:background="@drawable/returnarrow"
         android:contentDescription="Botón para regresar"/>
 
@@ -35,6 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:layout_marginTop="80dp"
         android:padding="10dp"
         android:clipToPadding="false">
 
@@ -58,11 +59,11 @@
                     android:id="@+id/tv_event_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
+                    android:padding="25dp"
                     android:text="Evento"
                     android:textColor="@android:color/black"
                     android:fontFamily="@font/lexend"
-                    android:textSize="14sp"
+                    android:textSize="20sp"
                     android:gravity="center"/>
             </com.google.android.material.card.MaterialCardView>
 
@@ -80,13 +81,13 @@
                 android:layout_marginBottom="10dp">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="3dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="10dp"
+                    android:padding="15dp"
                     android:text="Total Estimado"
                     android:textColor="@color/font"
-                    android:background="@color/backgroundButton"
+                    android:background="@drawable/bg_price_left"
                     android:fontFamily="@font/lexend"
                     android:textSize="14sp"
                     android:gravity="center"/>
@@ -96,13 +97,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="10dp"
+                    android:background="@drawable/bg_price_right"
+                    android:fontFamily="@font/lexend"
+                    android:gravity="center"
+                    android:padding="15dp"
                     android:text="E123"
                     android:textColor="@color/font"
-                    android:background="@color/backgroundButton"
-                    android:fontFamily="@font/lexend"
-                    android:textSize="14sp"
-                    android:gravity="center"/>
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -112,13 +113,13 @@
                 android:layout_marginBottom="10dp">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="3dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="10dp"
+                    android:padding="15dp"
                     android:text="Total Real"
                     android:textColor="@color/font"
-                    android:background="@color/backgroundButton"
+                    android:background="@drawable/bg_price_left"
                     android:fontFamily="@font/lexend"
                     android:textSize="14sp"
                     android:gravity="center"/>
@@ -128,10 +129,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="10dp"
+                    android:padding="15dp"
                     android:text="E123"
                     android:textColor="@color/font"
-                    android:background="@color/backgroundButton"
+                    android:background="@drawable/bg_price_right"
                     android:fontFamily="@font/lexend"
                     android:textSize="14sp"
                     android:gravity="center"/>

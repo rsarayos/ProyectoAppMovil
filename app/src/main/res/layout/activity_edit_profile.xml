@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".EditProfile">
 
     <TextView
@@ -15,10 +15,10 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="51dp"
         android:fontFamily="@font/lexend"
+        android:gravity="left|center"
         android:text="Editar\nPerfil"
         android:textColor="@color/font"
         android:textSize="36sp"
-        android:gravity="left|center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,26 +28,11 @@
         android:id="@+id/bt_regresar"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="228dp"
         android:background="@drawable/returnarrow"
         android:contentDescription="Boton para regresar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
-
-    <TextView
-        android:id="@+id/tv_name_form"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="340dp"
-        android:textSize="13sp"
-        android:textColor="@color/font"
-        android:fontFamily="@font/lexend"
-        android:text="Nombre"
-        android:textFontWeight="100"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,7 +40,7 @@
         android:id="@+id/et_name_form"
         android:layout_width="310dp"
         android:layout_height="50dp"
-        android:layout_marginTop="358dp"
+        android:layout_marginTop="412dp"
         android:backgroundTint="@color/font"
         android:ems="10"
         android:fontFamily="@font/lexend"
@@ -70,34 +55,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_email_form"
+        android:id="@+id/tv_name_form"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="440dp"
+        android:layout_marginTop="396dp"
         android:fontFamily="@font/lexend"
-        android:text="Email"
+        android:text="Nombre"
         android:textColor="@color/font"
         android:textFontWeight="100"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/et_email_form"
-        android:layout_width="310dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="460dp"
-        android:backgroundTint="@color/font"
-        android:ems="10"
-        android:fontFamily="@font/lexend"
-        android:hint="email@example.com"
-        android:inputType="text"
-        android:textColor="@color/font"
-        android:textColorHint="@color/font"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

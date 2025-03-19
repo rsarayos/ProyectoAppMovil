@@ -95,7 +95,6 @@
                         android:layout_centerVertical="true"/>
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
-
         </LinearLayout>
     </ScrollView>
 
