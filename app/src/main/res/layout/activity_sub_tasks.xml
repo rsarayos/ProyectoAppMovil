@@ -26,6 +26,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/returnarrow"
         android:contentDescription="Boton para regresar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,12 +34,60 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:cardBackgroundColor="@color/font"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:text="Nombre tarea"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/lexend"
+            android:textSize="20sp"
+            android:gravity="center"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:cardBackgroundColor="@color/backgroundButton"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_task_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="descripcion de la tarea"
+            android:fontFamily="@font/lexend"
+            android:textColor="@color/font"
+            android:textSize="16sp"
+            android:padding="25dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+    </com.google.android.material.card.MaterialCardView>
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_height="400dp"
         android:padding="10dp"
+        android:layout_marginBottom="10dp"
         android:clipToPadding="false">
 
         <LinearLayout
@@ -47,47 +96,31 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_subtareas"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardBackgroundColor="@color/font"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                android:layout_marginLeft="5sp"
-                android:layout_marginRight="5sp">
-
-                    <TextView
-                    android:id="@+id/tv_event_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="25dp"
-                    android:text="Nombre subtarea"
-                    android:textColor="@android:color/black"
-                    android:fontFamily="@font/lexend"
-                    android:textSize="20sp"
-                    android:gravity="center"/>
-            </com.google.android.material.card.MaterialCardView>
-
-            <include
-                android:id="@+id/item"
-                layout="@layout/sub_task_item" />
+                android:layout_height="400dp"
+                android:padding="2dp"
+                android:clipToPadding="false"
+                />
 
         </LinearLayout>
 
     </ScrollView>
 
     <ImageButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
         android:id="@+id/fab_add"
-        android:src="@drawable/plus"
-        android:layout_marginStart="340dp"
-        android:scaleType="centerInside"
-        android:padding="20dp"
-        android:contentDescription="Boton para agregar mas eventos"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/circle_background"
-        android:clipToOutline="true"/>
+        android:clipToOutline="true"
+        android:contentDescription="Boton para agregar mas tareas"
+        android:padding="27dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/plus" />
 
 
 </LinearLayout>

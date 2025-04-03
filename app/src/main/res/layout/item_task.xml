@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/bg_task">
+    android:background="@drawable/bg_task"
+    android:layout_margin="6dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,26 +19,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lexend"
-            android:text="Accesorios Para Fiesta"
-            android:textColor="@color/background"
-            android:textSize="13sp"
-            android:padding="7dp"
-            android:background="@drawable/custom_checkbox"
-            android:layout_marginStart="15dp" />
+            android:textColor="@color/font"
+            android:textSize="20sp"
+            android:padding="1dp"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="5dp" />
 
-        <ImageButton
-            android:id="@+id/ivVisibilidad"
-            android:layout_width="110sp"
-            android:layout_height="50sp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/bg_rounded"
-            android:contentDescription="Comprar accesorios"/>
+        <TextView
+            android:id="@+id/tv_nombreTarea"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="Accesorios Para Fiesta"
+            android:fontFamily="@font/lexend"
+            android:textColor="@color/background"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:background="@android:color/transparent"/>
 
         <ImageButton
             android:id="@+id/ivExpand"
-            android:layout_width="50sp"
-            android:layout_height="50sp"
-            android:layout_marginStart="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:background="@android:color/transparent"
             android:src="@drawable/forwardarrow"
             android:contentDescription="Expandir"/>
@@ -52,6 +54,7 @@
         android:paddingHorizontal="16dp">
 
         <TextView
+            android:id="@+id/tv_descripcionTarea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="25dp"
@@ -60,21 +63,17 @@
             android:textAlignment="center"
             android:textColor="@color/font"
             android:fontFamily="@font/lexend"
-            android:textSize="13sp"
+            android:textSize="16dp"
             android:background="@drawable/bg_rounded"
             android:layout_marginBottom="10dp"/>
 
-        <LinearLayout
-            android:id="@+id/layoutSubtareas"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_SubTareas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_subtask">
-
-            <include
-                android:id="@+id/itemBebidas"
-                layout="@layout/sub_task"/>
-        </LinearLayout>
+            android:padding="2dp"
+            android:clipToPadding="false"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,7 +90,7 @@
                 android:layout_weight="1"
                 android:text="Total"
                 android:textColor="@color/font"
-                android:textSize="13sp"
+                android:textSize="20sp"
                 android:fontFamily="@font/lexend"/>
 
             <TextView
@@ -100,10 +99,11 @@
                 android:layout_height="wrap_content"
                 android:text="$600.00"
                 android:textColor="@color/font"
-                android:textSize="13sp"
+                android:textSize="20sp"
                 android:fontFamily="@font/lexend"/>
         </LinearLayout>
 
     </LinearLayout>
 
 </LinearLayout>
+

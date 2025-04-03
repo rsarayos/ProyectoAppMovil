@@ -19,13 +19,11 @@
         android:layout_marginStart="51dp"
         android:gravity="center_vertical">
 
-        <!-- TextView -->
-
-        <!-- ImageButton -->
         <TextView
             android:id="@+id/tv_productoSelecionado"
             android:layout_width="207dp"
             android:layout_height="87dp"
+            android:fontFamily="@font/lexend"
             android:gravity="center_vertical"
             android:text="Todos los eventos"
             android:textColor="@color/font"
