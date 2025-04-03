@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/producto_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_nombre_producto"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del producto"
+                    android:textColor="@color/font"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/lexend"/>
+
+                <TextView
+                    android:id="@+id/tv_lugar_producto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oxxo"
+                    android:textColor="@color/font"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/lexend"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_precio_producto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="100.00"
+                android:textColor="@color/font"
+                android:textSize="20sp"
+                android:fontFamily="@font/lexend"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "515805441225",
-    "project_id": "proyecto-moviles-13249",
-    "storage_bucket": "proyecto-moviles-13249.firebasestorage.app"
+    "project_number": "924666065577",
+    "project_id": "proyectoappmoviles-150be",
+    "storage_bucket": "proyectoappmoviles-150be.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:515805441225:android:df3b25ec2076e0d4a3f118",
+        "mobilesdk_app_id": "1:924666065577:android:c43dc3db1559dec9c3afb8",
         "android_client_info": {
           "package_name": "equipo.cinco.planeaciondeeventos"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAJbphjwOfuCtkNkYStMczTErXQJMqtdes"
+          "current_key": "AIzaSyBxIds5eurIHnEa87TkgslQD0xNGRcNYYk"
         }
       ],
       "services": {
