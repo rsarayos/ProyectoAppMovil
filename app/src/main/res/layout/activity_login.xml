@@ -147,6 +147,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_password_form"
         android:textColor="@color/font"
-        android:textSize="15dp"/>
+        android:textSize="12dp"
+        android:fontFamily="@font/lexend"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

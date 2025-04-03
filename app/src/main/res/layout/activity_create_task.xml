@@ -57,7 +57,8 @@
             android:hint="Accesorios para fiesta"
             android:inputType="text"
             android:textColorHint="@color/backgroundButton"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:textColor="@color/font"/>
 
         <TextView
             android:layout_width="310dp"
@@ -78,9 +79,8 @@
             android:backgroundTint="@color/font"
             android:fontFamily="@font/lexend"
             android:textSize="12sp"
+            android:textColor="@color/font" />
 
-            />
-        
         <TextView
             android:layout_width="310dp"
             android:layout_height="50dp"
@@ -100,9 +100,9 @@
             android:backgroundTint="@color/font"
             android:fontFamily="@font/lexend"
             android:textSize="12sp"
-            />
+            android:textColor="@color/font"/>
     </LinearLayout>
-    
+
     <Button
         android:id="@+id/bt_siguiente"
         android:layout_width="230dp"
