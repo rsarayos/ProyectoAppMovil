@@ -66,10 +66,10 @@
             android:id="@+id/tv_event_desc"
             android:layout_width="379dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:fontFamily="@font/lexend"
             android:gravity="center"
-            android:padding="20dp"
-            android:layout_gravity="center"
+            android:padding="25dp"
             android:text="Evento principal en local 'Las Flores'"
             android:textColor="@android:color/black"
             android:textSize="16sp"
@@ -80,7 +80,7 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="400sp"
-        android:layout_height="480sp"
+        android:layout_height="400sp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:clipToPadding="false"
@@ -96,9 +96,8 @@
                 android:id="@+id/recycler_tareas"
                 android:layout_width="match_parent"
                 android:layout_height="450dp"
-                android:padding="2dp"
                 android:clipToPadding="false"
-                />
+                android:padding="2dp" />
 
 
         </LinearLayout>
