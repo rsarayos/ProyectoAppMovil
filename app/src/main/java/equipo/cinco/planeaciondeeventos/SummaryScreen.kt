@@ -29,7 +29,6 @@ class SummaryScreen : AppCompatActivity() {
         var button_regresar : ImageButton = findViewById(R.id.bt_regresar) as ImageButton
         val pieChart = findViewById<PieChart>(R.id.pie_chart)
 
-        // Datos estáticos para el gráfico de pastel
         val entries = listOf(
             PieEntry(40f, "Ventas"),
             PieEntry(25f, "Marketing"),
@@ -37,30 +36,27 @@ class SummaryScreen : AppCompatActivity() {
             PieEntry(15f, "Logística")
         )
 
-        // Configuración del conjunto de datos
         val dataSet = PieDataSet(entries, "Distribución de Presupuesto")
         dataSet.colors = listOf(
             Color.BLUE,
             Color.RED,
             Color.GREEN,
             Color.MAGENTA
-        ) // Colores para cada segmento
+        )
         dataSet.valueTextColor = Color.WHITE
         dataSet.valueTextSize = 12f
 
-        // Asignar datos al gráfico
         val pieData = PieData(dataSet)
         pieChart.data = pieData
 
-        // Personalización del gráfico
         val description = Description()
         description.text = "Distribución de Presupuesto Anual"
         pieChart.description = description
-        pieChart.setEntryLabelColor(Color.BLACK) // Color de los textos en el gráfico
+        pieChart.setEntryLabelColor(Color.BLACK)
         pieChart.setEntryLabelTextSize(12f)
-        pieChart.setUsePercentValues(true) // Mostrar valores como porcentajes
-        pieChart.animateY(1000) // Animación de entrada
-        pieChart.invalidate() // Refrescar el gráfico
+        pieChart.setUsePercentValues(true)
+        pieChart.animateY(1000)
+        pieChart.invalidate()
 
         button_regresar.setOnClickListener{
             val intent = Intent(this@SummaryScreen,eventScreen::class.java)
