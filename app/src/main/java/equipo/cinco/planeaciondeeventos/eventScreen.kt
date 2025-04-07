@@ -71,7 +71,11 @@ class eventScreen : AppCompatActivity() {
             intent.putExtra("eventId", eventId)
             startActivity(intent)
         }
-
+        button_resumen.setOnClickListener({
+            val intent = Intent(this, SummaryScreen::class.java)
+            intent.putExtra("eventId", eventId)
+            startActivity(intent)
+        })
     }
 
     private fun cargarTareas() {

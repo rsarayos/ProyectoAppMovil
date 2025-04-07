@@ -27,41 +27,6 @@ class SummaryScreen : AppCompatActivity() {
         }
 
         var button_regresar : ImageButton = findViewById(R.id.bt_regresar) as ImageButton
-        val pieChart = findViewById<PieChart>(R.id.pie_chart)
-
-        val entries = listOf(
-            PieEntry(40f, "Ventas"),
-            PieEntry(25f, "Marketing"),
-            PieEntry(20f, "Producción"),
-            PieEntry(15f, "Logística")
-        )
-
-        val dataSet = PieDataSet(entries, "Distribución de Presupuesto")
-        dataSet.colors = listOf(
-            Color.BLUE,
-            Color.RED,
-            Color.GREEN,
-            Color.MAGENTA
-        )
-        dataSet.valueTextColor = Color.WHITE
-        dataSet.valueTextSize = 12f
-
-        val pieData = PieData(dataSet)
-        pieChart.data = pieData
-
-        val description = Description()
-        description.text = "Distribución de Presupuesto Anual"
-        pieChart.description = description
-        pieChart.setEntryLabelColor(Color.BLACK)
-        pieChart.setEntryLabelTextSize(12f)
-        pieChart.setUsePercentValues(true)
-        pieChart.animateY(1000)
-        pieChart.invalidate()
-
-        button_regresar.setOnClickListener{
-            val intent = Intent(this@SummaryScreen,eventScreen::class.java)
-            startActivity(intent)
-        }
-
+        
     }
 }
