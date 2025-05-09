@@ -127,16 +127,51 @@ class SubTasks : AppCompatActivity() {
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val subtarea = subtareas[position]
             holder.tvNombre.text = subtarea.name
+
             holder.tvDescripcion.text = subtarea.desc
             holder.tvPrecio.text = "$${String.format("%.2f", subtarea.estimated_cost ?: 0f)}"
 
+            holder.checkBox.isChecked = subtarea.estado ?: false
+
+            // Función para alternar la visibilidad de los detalles de la subtarea
             val toggle = {
                 val visible = holder.layoutHeader.visibility == View.VISIBLE
                 holder.layoutHeader.visibility = if (visible) View.GONE else View.VISIBLE
             }
 
+            // Configurar el comportamiento de los clics en la subtarea
             holder.tvNombre.setOnClickListener { toggle() }
-            holder.checkBox.setOnClickListener { toggle() }
+
+            // Cuando se cambia el estado del checkbox, se actualiza en Firebase
+            holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
+                // Actualizar el estado en el objeto subtarea
+                subtarea.estado = isChecked
+
+                // Obtener el usuario actual
+                val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@setOnCheckedChangeListener
+
+                // Referencia al nodo de la subtarea en Firebase
+                val ref = FirebaseDatabase.getInstance("https://proyectoappmoviles-150be-default-rtdb.firebaseio.com")
+                    .getReference("Users")
+                    .child(uid)
+                    .child("eventos")
+                    .child(eventId)
+                    .child("tareas")
+                    .child(taskId)
+                    .child("subtareas")
+                    .child(subtarea.id!!)
+
+                // Actualizar el valor de estado en Firebase
+                ref.child("estado").setValue(subtarea.estado)
+                    .addOnSuccessListener {
+                        // Si la actualización fue exitosa
+                        Toast.makeText(holder.itemView.context, "Subtarea actualizada", Toast.LENGTH_SHORT).show()
+                    }
+                    .addOnFailureListener {
+                        // Si hubo un error al actualizar
+                        Toast.makeText(holder.itemView.context, "Error al actualizar subtarea", Toast.LENGTH_SHORT).show()
+                    }
+            }
 
             holder.btnIrDetalle.setOnClickListener {
                 val context = holder.itemView.context

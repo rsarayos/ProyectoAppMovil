@@ -113,6 +113,7 @@ class eventScreen : AppCompatActivity() {
             val expandButton: ImageButton = itemView.findViewById(R.id.ivExpand)
             val recyclerSubtareas: RecyclerView = itemView.findViewById(R.id.recycler_SubTareas)
             val tvTotal: TextView = itemView.findViewById(R.id.tv_totalCantidad)
+            val checkBox: CheckBox = itemView.findViewById(R.id.cbTarea)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
@@ -124,6 +125,12 @@ class eventScreen : AppCompatActivity() {
             val tarea = tareas[position]
             holder.tvNombre.text = tarea.name
             holder.tvDescripcion.text = tarea.desc
+            holder.checkBox.isChecked = tarea.estado ?: false
+
+            val toggle = {
+                val visible = holder.layoutHeader.visibility == View.VISIBLE
+                holder.layoutHeader.visibility = if (visible) View.GONE else View.VISIBLE
+            }
 
             holder.tvNombre.setOnClickListener {
                 val visible = holder.layoutHeader.visibility == View.VISIBLE
@@ -171,6 +178,31 @@ class eventScreen : AppCompatActivity() {
                 }
             })
 
+            holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
+                // Actualizar el estado en el objeto tarea
+                tarea.estado = isChecked
+
+                // Actualizar el estado en la base de datos
+                val tareaRef = FirebaseDatabase.getInstance("https://proyectoappmoviles-150be-default-rtdb.firebaseio.com")
+                    .getReference("Users")
+                    .child(uid)
+                    .child("eventos")
+                    .child(eventId)
+                    .child("tareas")
+                    .child(tarea.id!!)
+
+                // Actualizar el valor de estado en Firebase
+                tareaRef.child("estado").setValue(tarea.estado)
+                    .addOnSuccessListener {
+                        // Si la actualización fue exitosa
+                        Toast.makeText(context, "Estado de la tarea actualizado", Toast.LENGTH_SHORT).show()
+                    }
+                    .addOnFailureListener {
+                        // Si hubo un error al actualizar
+                        Toast.makeText(context, "Error al actualizar el estado de la tarea", Toast.LENGTH_SHORT).show()
+                    }
+            }
+
             val btnEliminar: TextView = holder.itemView.findViewById(R.id.EliminarTarea)
             btnEliminar.setOnClickListener {
                 val tareaRef = FirebaseDatabase.getInstance("https://proyectoappmoviles-150be-default-rtdb.firebaseio.com")
@@ -205,6 +237,8 @@ class eventScreen : AppCompatActivity() {
         override fun onBindViewHolder(holder: SubTaskViewHolder, position: Int) {
             val subtask = subtareas[position]
             holder.checkBox.text = subtask.name
+            holder.checkBox.isChecked = subtask.estado ?: false
+            holder.checkBox.isEnabled = false
             holder.precio.text = "$${String.format("%.2f", subtask.estimated_cost ?: 0f)}"
         }
 
