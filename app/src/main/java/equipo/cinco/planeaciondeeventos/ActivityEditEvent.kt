@@ -79,7 +79,7 @@ class ActivityEditEvent : AppCompatActivity() {
             ref.updateChildren(cambios).addOnCompleteListener {
                 if (it.isSuccessful) {
                     Toast.makeText(this, "Evento actualizado correctamente", Toast.LENGTH_SHORT).show()
-                    finish() // Regresa a la pantalla anterior
+                    finish()
                 } else {
                     Toast.makeText(this, "Error al actualizar el evento", Toast.LENGTH_SHORT).show()
                 }

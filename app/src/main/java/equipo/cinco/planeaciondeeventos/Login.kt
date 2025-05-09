@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -35,45 +36,39 @@ class Login : AppCompatActivity() {
         var button_register: Button = findViewById(R.id.b_register) as Button
         val error: TextView = findViewById(R.id.textError)
 
-        login_button.setOnClickListener{
-            if(email.text.isEmpty() || password.text.isEmpty()){
-                showError("Por favor, rellene todos los campos",true)
-            }else{
-                login(email.text.toString(),password.text.toString())
+        login_button.setOnClickListener {
+            if (email.text.isEmpty() || password.text.isEmpty()) {
+                showError("Por favor, rellene todos los campos")
+            } else {
+                login(email.text.toString(), password.text.toString())
             }
         }
 
-        button_register.setOnClickListener{
+        button_register.setOnClickListener {
             val intent = Intent(this@Login, Register::class.java)
             startActivity(intent)
-
         }
-
     }
 
-    fun goToMain(user: FirebaseUser){
+    fun goToMain(user: FirebaseUser) {
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("user", user.email)
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
-
     }
 
-    fun showError(text:String = "",visible:Boolean){
-        val error: TextView = findViewById(R.id.textError)
-        error.text = text
-        error.visibility = if(visible) TextView.VISIBLE else TextView.INVISIBLE
+    fun showError(text: String) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
     }
 
-
-    fun login(email:String, password:String){
+    fun login(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
                     goToMain(user!!)
                 } else {
-                    showError("Error al iniciar sesión",true)
+                    showError("Error al iniciar sesión")
                 }
             }
     }

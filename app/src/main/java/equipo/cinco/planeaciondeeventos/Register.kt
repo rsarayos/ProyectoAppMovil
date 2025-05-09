@@ -43,18 +43,22 @@ class Register : AppCompatActivity() {
         var button_login : Button = findViewById(R.id.b_login2) as Button
 
         button_register.setOnClickListener{
-            if (email.text.isEmpty()||password.text.isEmpty()||confirmPassword.text.isEmpty()||usuario.text.isEmpty()){
-                error.text = "Todos los campos deben ser llenados"
-                error.visibility = View.VISIBLE
+            val emailText = email.text.toString()
+            val passwordText = password.text.toString()
+            val confirmText = confirmPassword.text.toString()
+            val usuarioText = usuario.text.toString()
+
+            if (emailText.isEmpty() || passwordText.isEmpty() || confirmText.isEmpty() || usuarioText.isEmpty()) {
+                Toast.makeText(this, "Todos los campos deben ser llenados", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            if (!password.text.toString().equals(confirmPassword.text.toString())){
-                error.text = "Las contraseñas no coinciden"
-                error.visibility = View.VISIBLE
+
+            if (passwordText != confirmText) {
+                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            error.visibility = View.INVISIBLE
-            signIn(email.text.toString(),password.text.toString(), usuario.text.toString())
+
+            signIn(emailText, passwordText, usuarioText)
         }
 
         button_login.setOnClickListener{

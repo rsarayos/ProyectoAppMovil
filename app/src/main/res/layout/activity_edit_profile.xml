@@ -31,7 +31,7 @@
         android:layout_marginTop="228dp"
         android:background="@drawable/returnarrow"
         android:contentDescription="Boton para regresar"
-        android:visibility="gone"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
