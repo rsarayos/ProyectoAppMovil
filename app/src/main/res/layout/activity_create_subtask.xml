@@ -43,7 +43,7 @@
        android:id="@+id/tv_name_subtask_form"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:layout_marginTop="50dp"
+       android:layout_marginTop="-20dp"
        android:layout_marginLeft="50dp"
        android:fontFamily="@font/lexend"
        android:text="Nombre de la subtarea"
@@ -135,7 +135,7 @@
          <androidx.recyclerview.widget.RecyclerView
              android:id="@+id/recyclerProductos"
              android:layout_width="match_parent"
-             android:layout_height="100dp"
+             android:layout_height="200dp"
              android:layout_gravity="center"
              android:layout_marginBottom="15dp"
              android:padding="2dp"

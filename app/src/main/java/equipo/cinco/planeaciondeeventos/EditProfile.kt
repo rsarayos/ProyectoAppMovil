@@ -18,10 +18,12 @@ import com.google.firebase.database.FirebaseDatabase
 
 class EditProfile : AppCompatActivity() {
 
+    // Constantes
     private val REQUEST_IMAGE_GET = 1
     private val CLOUD_NAME = "dq1hkmqeg"
     private val UPLOAD_PRESET = "profile-preset"
 
+    // Uri temporal
     private var imageUri: Uri? = null
 
     private lateinit var profileImage: ImageView
@@ -41,6 +43,7 @@ class EditProfile : AppCompatActivity() {
             insets
         }
 
+        // Inicializa Cloudinary y carga perfil del usuario
         initCloudinary()
         loadUserProfile()
 
@@ -78,6 +81,7 @@ class EditProfile : AppCompatActivity() {
         MediaManager.init(this, config)
     }
 
+    //Recibe la imagen seleccionada del usuario.
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_IMAGE_GET && resultCode == Activity.RESULT_OK) {
@@ -90,6 +94,7 @@ class EditProfile : AppCompatActivity() {
         }
     }
 
+    // Sube la imagen seleccionada a Cloudinary
     private fun uploadImageToCloudinary() {
         MediaManager.get().upload(imageUri)
             .unsigned(UPLOAD_PRESET)
@@ -137,6 +142,7 @@ class EditProfile : AppCompatActivity() {
             }
     }
 
+    //Carga el nombre y foto actual del usuario desde Firebase
     private fun loadUserProfile() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
         val db = FirebaseDatabase.getInstance().getReference("Users").child(userId)

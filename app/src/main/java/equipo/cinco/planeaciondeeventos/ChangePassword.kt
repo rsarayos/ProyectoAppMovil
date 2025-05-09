@@ -20,14 +20,19 @@ class ChangePassword : AppCompatActivity() {
             insets
         }
 
+        // Botón para regresar a la pantalla de configuración
         var button_regresar : ImageButton = findViewById(R.id.b_mock_back) as ImageButton
+        // Botón para confirmar la acción de cambio de contraseña
         var button_actualizar : Button = findViewById(R.id.b_change_password) as Button
 
+        // Acción al presionar "Actualizar contraseña"
         button_actualizar.setOnClickListener{
+            //Solo redirige a Configuración, no cambia nada realmente
             val intent = Intent(this@ChangePassword,Configuration::class.java)
             startActivity(intent)
         }
 
+        // Acción al presionar "Regresar"
         button_regresar.setOnClickListener{
             val intent = Intent(this@ChangePassword,Configuration::class.java)
             startActivity(intent)
