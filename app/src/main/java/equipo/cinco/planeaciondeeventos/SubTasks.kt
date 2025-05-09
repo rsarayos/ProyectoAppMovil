@@ -92,7 +92,12 @@ class SubTasks : AppCompatActivity() {
                 subtareas.clear()
                 for (snap in snapshot.children) {
                     val sub = snap.getValue(SubTaskOb::class.java)
-                    sub?.let { subtareas.add(it) }
+                    if (!sub?.name.isNullOrEmpty()) {
+                        subtareas.add(sub!!)
+                    } else {
+
+                        snap.ref.removeValue()
+                    }
                 }
                 adapter.notifyDataSetChanged()
             }
@@ -200,8 +205,12 @@ class SubTasks : AppCompatActivity() {
                     .child("subtareas")
                     .child(subtarea.id!!)
 
+
+
                 ref.removeValue().addOnSuccessListener {
                     Toast.makeText(holder.itemView.context, "Subtarea eliminada", Toast.LENGTH_SHORT).show()
+
+
                 }.addOnFailureListener {
                     Toast.makeText(holder.itemView.context, "Error al eliminar subtarea", Toast.LENGTH_SHORT).show()
                 }

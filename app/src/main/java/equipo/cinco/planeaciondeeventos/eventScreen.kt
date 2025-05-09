@@ -90,7 +90,15 @@ class eventScreen : AppCompatActivity() {
                 for (tareaSnapshot in snapshot.children) {
                     val tarea = tareaSnapshot.getValue(Task::class.java)
                     tarea?.id = tareaSnapshot.key
-                    tarea?.let { tareas.add(it) }
+
+
+                    if (!tarea?.name.isNullOrEmpty() || !tarea?.desc.isNullOrEmpty()) {
+                        tareas.add(tarea!!)
+                    } else {
+
+                        tareaSnapshot.ref.removeValue()
+                    }
+
                 }
                 adapter.notifyDataSetChanged()
             }
@@ -212,6 +220,11 @@ class eventScreen : AppCompatActivity() {
 
                 tareaRef.removeValue().addOnSuccessListener {
                     Toast.makeText(context, "Tarea eliminada correctamente", Toast.LENGTH_SHORT).show()
+
+                    if (context is eventScreen) {
+                        context.cargarTareas()
+                    }
+
                 }.addOnFailureListener {
                     Toast.makeText(context, "Error al eliminar tarea", Toast.LENGTH_SHORT).show()
                 }

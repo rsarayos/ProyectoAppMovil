@@ -5,7 +5,7 @@ class SubTaskOb (var id: String? = null,
                  var desc: String?=null,
                  var estimated_cost: Float?=null,
                  var productos: Any? = null,
-                 var estado: Boolean?= null
+                 var estado: Boolean = false
 ){
-    constructor() : this(null,null, null,null, null,null)
+    constructor() : this(null,null, null,null, null,false)
 }
