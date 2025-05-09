@@ -30,6 +30,7 @@
         android:backgroundTint="@color/background"
         android:src="@drawable/returnarrow"
         android:contentDescription="Boton para regresar"
+        android:visibility="invisible"
         />
 
     <LinearLayout

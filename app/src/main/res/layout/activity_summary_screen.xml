@@ -28,7 +28,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginStart="45dp"
         android:background="@drawable/returnarrow"
-        android:contentDescription="Botón para regresar"/>
+        android:contentDescription="Botón para regresar"
+        android:visibility="invisible"/>
 
     <ScrollView
         android:id="@+id/scrollView"

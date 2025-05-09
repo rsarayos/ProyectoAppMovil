@@ -98,6 +98,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/eliminarSubTarea"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Borrar"
@@ -105,7 +106,7 @@
             android:textColor="@color/colorButton"
             android:gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="163dp"
+            android:layout_marginLeft="158dp"
             android:layout_marginBottom="15dp"/>
 
     </LinearLayout>

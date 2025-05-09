@@ -47,6 +47,7 @@ class eventScreen : AppCompatActivity() {
         tv_nombre_evento = findViewById(R.id.tv_event_name)
         tv_descripcion_evento = findViewById(R.id.tv_event_desc)
 
+
         var bundle = intent.extras
 
         if (bundle != null) {
@@ -169,6 +170,21 @@ class eventScreen : AppCompatActivity() {
                     Toast.makeText(context, "Error al cargar subtareas", Toast.LENGTH_SHORT).show()
                 }
             })
+
+            val btnEliminar: TextView = holder.itemView.findViewById(R.id.EliminarTarea)
+            btnEliminar.setOnClickListener {
+                val tareaRef = FirebaseDatabase.getInstance("https://proyectoappmoviles-150be-default-rtdb.firebaseio.com")
+                    .getReference("Users").child(uid)
+                    .child("eventos").child(eventId)
+                    .child("tareas").child(tarea.id!!)
+
+                tareaRef.removeValue().addOnSuccessListener {
+                    Toast.makeText(context, "Tarea eliminada correctamente", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener {
+                    Toast.makeText(context, "Error al eliminar tarea", Toast.LENGTH_SHORT).show()
+                }
+            }
+
         }
 
         override fun getItemCount(): Int = tareas.size

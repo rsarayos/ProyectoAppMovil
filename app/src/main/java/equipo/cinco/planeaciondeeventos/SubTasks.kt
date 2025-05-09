@@ -116,6 +116,7 @@ class SubTasks : AppCompatActivity() {
             val tvPrecio: TextView = itemView.findViewById(R.id.tv_totalCantidad)
             val layoutHeader: LinearLayout = itemView.findViewById(R.id.layoutTareaHeader)
             val btnIrDetalle: ImageButton = itemView.findViewById(R.id.ib_ir_detalle_subtarea)
+            val btnEliminar: TextView = itemView.findViewById(R.id.eliminarSubTarea)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -150,6 +151,27 @@ class SubTasks : AppCompatActivity() {
                 }
                 context.startActivity(intent)
             }
+
+            holder.btnEliminar.setOnClickListener {
+                val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@setOnClickListener
+
+                val ref = FirebaseDatabase.getInstance("https://proyectoappmoviles-150be-default-rtdb.firebaseio.com")
+                    .getReference("Users")
+                    .child(uid)
+                    .child("eventos")
+                    .child(eventId)
+                    .child("tareas")
+                    .child(taskId)
+                    .child("subtareas")
+                    .child(subtarea.id!!)
+
+                ref.removeValue().addOnSuccessListener {
+                    Toast.makeText(holder.itemView.context, "Subtarea eliminada", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener {
+                    Toast.makeText(holder.itemView.context, "Error al eliminar subtarea", Toast.LENGTH_SHORT).show()
+                }
+            }
+
         }
 
         override fun getItemCount(): Int = subtareas.size
