@@ -67,22 +67,21 @@
         android:textColor="@color/font"
         android:textAlignment="textStart"
         />
-    
+
     <Button
         android:id="@+id/bt_cerrarSesion"
         android:layout_width="301dp"
         android:layout_height="109dp"
-        android:layout_marginTop="270dp"
         android:layout_marginStart="52dp"
+        android:layout_marginTop="220dp"
         android:backgroundTint="@color/background"
-        app:cornerRadius="6dp"
         android:fontFamily="@font/lexend"
         android:paddingHorizontal="30dp"
         android:paddingVertical="15dp"
         android:text="Cerrar Sesión"
-        android:textSize="20sp"
-        android:textColor="@color/colorButton"
         android:textAlignment="center"
-        />
+        android:textColor="@color/colorButton"
+        android:textSize="20sp"
+        app:cornerRadius="6dp" />
 
 </LinearLayout>
