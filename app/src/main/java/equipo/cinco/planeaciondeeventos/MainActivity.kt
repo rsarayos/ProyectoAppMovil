@@ -18,6 +18,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity() {
     val uid = currentUser?.uid
     private val userRef = FirebaseDatabase.getInstance("https://proyectoappmoviles-150be-default-rtdb.firebaseio.com")
         .getReference("Users").child(uid!!).child("eventos")
+    val userProfileRef = FirebaseDatabase.getInstance("https://proyectoappmoviles-150be-default-rtdb.firebaseio.com")
+        .getReference("Users").child(uid!!)
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: EventAdapter
     private val eventos = mutableListOf<Event>()
@@ -75,6 +78,17 @@ class MainActivity : AppCompatActivity() {
         button_profil.setOnClickListener{
             val intent = Intent(this@MainActivity,Configuration::class.java)
             startActivity(intent)
+        }
+
+        userProfileRef.get().addOnSuccessListener { snapshot ->
+            val imageUrl = snapshot.child("profileImage").getValue(String::class.java)
+            if (!imageUrl.isNullOrEmpty()) {
+                Glide.with(this)
+                    .load(imageUrl)
+                    .placeholder(R.drawable.profile_picture)
+                    .circleCrop()
+                    .into(button_profil)
+            }
         }
 
     }

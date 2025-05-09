@@ -32,8 +32,8 @@
 
         <ImageButton
             android:id="@+id/summary_icon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_marginLeft="50sp"
             android:background="@drawable/profile_picture"
             android:contentDescription="profile" />
