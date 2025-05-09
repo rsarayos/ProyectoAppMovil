@@ -44,7 +44,7 @@ class EditProfile : AppCompatActivity() {
         initCloudinary()
         loadUserProfile()
 
-        // Inicializar vistas
+
         profileImage = findViewById(R.id.iv_profile_image)
         overlay = findViewById(R.id.view_overlay)
         cameraIcon = findViewById(R.id.iv_camera_icon)
@@ -52,14 +52,13 @@ class EditProfile : AppCompatActivity() {
         btnActualizar = findViewById(R.id.b_update)
         btnRegresar = findViewById(R.id.bt_regresar)
 
-        // Click en imagen para seleccionar nueva
+
         profileImage.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "image/*"
             startActivityForResult(intent, REQUEST_IMAGE_GET)
         }
 
-        // Botón Actualizar
         btnActualizar.setOnClickListener {
             if (imageUri != null) {
                 uploadImageToCloudinary()
@@ -68,7 +67,6 @@ class EditProfile : AppCompatActivity() {
             }
         }
 
-        // Botón Regresar
         btnRegresar.setOnClickListener {
             finish()
         }
